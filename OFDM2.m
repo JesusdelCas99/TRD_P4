@@ -104,7 +104,7 @@ plot(thr)
 hold off
 grid on;
 xlabel('muestra (n)')
-legend('$|\rho_{\hat{N}_{FFT,N_{W}}}(n)|/\rho^{\prime}_{\hat{N}_{FFT,N_{W}}}$','$thr(|\rho_{\hat{N}_{FFT,N_{W}}}(n)|)$')
+legend('$|\rho_{\hat{N}_{FFT,N_{W}}}(n)|/\rho^{\prime}_{\hat{N}_{FFT,N_{W}}}$','$thr(|\rho_{\hat{N}_{FFT,N_{W}}}(n)|,\acute{\rho}_{\hat{N}_{FFT,N_{W}}}/3)$')
 title('Senal OFDM2','interpreter','latex')
 
 %% Sincronización temporal en DVB-T
