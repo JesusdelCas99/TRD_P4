@@ -144,10 +144,11 @@ title('Maximum correlation metric method')
 xlabel('Muestra (n)')
 ylabel('$|\rho_{\hat{N}_{FFT,N_{W}}}(n)|$')
 legend('Muestra inicial del prefijo ciclico')
-ini_n=max_rho-2+Ng_est;
+ini_n=max_rho-1+Ng_est;
 sprintf("El primer simbolo OFDM comienza en la muestra "+ini_n)
 
 %% Segmentamos la señal en simbolos OFDM
+ini_n=ini_n+1;%Devolvemos a la muestra inicial del bucle
 n_sim=1;
 l_archivo=length(data);
 
@@ -163,5 +164,8 @@ while((ini_n+(n_sim-1)*(NFFT_2K+Ng_est)<=l_archivo) && (ini_n+(n_sim-1)*(NFFT_2K
     end
     n_sim=n_sim+1;
 end
+
+ini_pos=ini_pos-1;
+end_pos=end_pos-1;
 
 sprintf("Numero completo de simbolos OFDM: "+(n_sim-1))

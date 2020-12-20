@@ -8,7 +8,7 @@ function [Ng_est,thr,rho_max] = guard_interval(Nd,rho,NFFT_2K)
     thr=zeros(1,Nd);
     
     for i=1:Nd
-        if abs(rho(i))>(rho_max/3)
+        if abs(rho(i))>=(rho_max/3)
             thr(i)=1;
         else
             thr(i)=0;
